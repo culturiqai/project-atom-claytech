@@ -1,98 +1,106 @@
-# Project Clay // Vertebrate Workbench
+# Project Atom // Neuro-Symbolic General Intelligence
 
-**A Closed-Loop Neuro-Symbolic Autopoietic Discovery Engine.**
+**One Architecture. Three Worlds.**
 
-Project Clay is an experimental AI architecture that bridges the gap between chaotic neural dynamics (System 1) and symbolic reasoning (System 2). It applies **Liquid Time-Constant (LTC)** networks to control high-dimensional turbulence in a **Spectral Navier-Stokes** simulation, while simultaneously deriving the mathematical laws governing that very simulation.
+**Atom** is an experimental **General Intelligence** designed to solve high-dimensional chaotic control problems. Unlike narrow AI, which optimizes for a specific reward, Atom uses a unified Neuro-Symbolic architecture to **discover the governing laws** of its environment—whether that environment is a storm, a stock market, or a wind tunnel.
+
+It bridges the gap between **System 1 (Fast Intuition)** using Liquid Neural Networks and **System 2 (Slow Reasoning)** using Symbolic Regression, allowing it to "understand" physics rather than just mimicking it.
 
 <div align="center">
 <video src="atom_ns.mp4" width="100%" controls autoplay loop muted></video>
-<p><em>Real-time capture of the Clay Workbench: The "Scientist" module discovering physics equations (bottom right) while the "Liquid Brain" stabilizes the fluid (center).</em></p>
+<p><em>Figure 1: Atom // Genesis Module discovering the Navier-Stokes equations in real-time while stabilizing 2D turbulence.</em></p>
 </div>
 
 ---
 
-## System Architecture
+## The Core Hypothesis
 
-The system is composed of five distinct, asynchronous modules that function as a single cognitive entity.
+Atom operates on a single premise: **Intelligence is the compression of chaos into symbols.**
 
-### 1. The Cortex (System 1: Fast Intuition)
+Regardless of the domain, the Atom Core applies the same cognitive loop:
 
-The core controller is a **Liquid Neural Network** designed to operate in continuous time, mimicking biological nervous systems.
-
-* **Liquid Time-Constants (LTC):** The brain processes inputs using differential equations rather than discrete layers, allowing for adaptive temporal processing suitable for fluid dynamics.
-* **The "Nano-Bone" Architecture:** To prevent the chaotic neural network from becoming unstable, the system implements a `NanoPCABone` layer. This acts as a manifold constraint system using online Principal Component Analysis (PCA). It learns the "valid" shape of neural activity and generates a **Structural Stress** signal (simulated pain) if the brain's state drifts too far from the learned manifold.
-* **Plasticity:** The brain utilizes deferred plasticity, accumulating growth signals in a buffer and applying them in batches to simulate biological hardening.
-
-### 2. The Scientist (System 2: Slow Reasoning)
-
-Running asynchronously alongside the physics loop is `ScientistV2`, a symbolic regression engine based on **PySR**.
-
-* **Active Discovery:** The scientist observes the agent's actions and the fluid's response, buffering this data into short-term memory.
-* **Symbolic Injection:** It attempts to fit mathematical equations to the observed data. Once a law is discovered (e.g., a relationship between Enstrophy and Phase), it is compiled into a fast Python function and injected back into the Brain as a new "theoretical intuition" sensory input.
-* **Cognitive Feedback:** The system becomes "conscious" of the math governing its environment.
-
-### 3. The Body (Spectral Physics)
-
-The environment is a Direct Numerical Simulation (DNS) of the Navier-Stokes equations.
-
-* **Spectral Solver:** Uses Fast Fourier Transforms (FFT) to solve fluid dynamics in frequency space (-space), ensuring high fidelity for turbulence calculations.
-* **The Phoenix Protocol:** If the fluid flow decays into a laminar (boring) state, the system triggers a "Phoenix Event," mutating the initial conditions to force the agent into new, chaotic regimes.
-
-### 4. The Drive (Intrinsic Curiosity)
-
-Instead of standard reinforcement learning rewards, Clay uses an **Intrinsic Curiosity Module (ICM)**.
-
-* **Prediction Error:** The agent contains a Forward Model that predicts the next state of the fluid. The reward signal is derived from the *error* of this prediction.
-* **Behavior:** The AI is mathematically incentivized to generate "surprising" turbulence and novel fluid structures, preventing it from settling into simple, repetitive loops.
-
-### 5. The Narrator (LLM Integration)
-
-A specialized `Journalist` module provides a voice to the system.
-
-* **State-Aware Logging:** Connects to a local Large Language Model (e.g., `gpt-oss:20b`) to analyze telemetry.
-* **Automated Lab Reports:** It translates raw variables (e.g., `x0`, `x1`) into physical concepts (`Freq_Tgt`, `Phase`) and writes scientific log entries describing trends like "Explosive Growth" or "Collapses".
+1. **Perceive:** Compress high-dimensional inputs (Vision/Order Books/Grids) into latent physics states using **Fourier Neural Operators (FNO)**.
+2. **React (System 1):** Execute control using **Liquid Time-Constant (LTC)** networks, which are mathematically immune to chaos and volatility.
+3. **Reason (System 2):** Run an asynchronous "Scientist" thread that observes the agent's actions and derives human-readable mathematical laws (LaTeX) to explain the environment.
 
 ---
 
-## The Workbench Interface
+## Domain 1: Theoretical Physics (Genesis)
 
-The project includes a multi-threaded web interface (`server.py` + `ui.html`) that visualizes the "Mind" and "Body" simultaneously.
+*Formerly "Clay"*
 
-* **Twin View:** Real-time rendering of the spectral fluid field.
-* **Neural Telemetry:** Live charts tracking **Enstrophy** (Turbulence) and **Bone Stress** (Skeletal Integrity).
-* **Cortex Cluster:** A segmented grid visualization showing real-time activation of Sensory, Liquid, and Motor neurons.
-* **Scientist Log:** A live feed of the symbolic equations currently being hypothesized by the System 2 engine.
+The Genesis module represents Atom's "playground"—a pure environment to test its ability to derive fundamental physics from scratch.
 
----
-
-## Sample Telemetry
-
-*From the `journalist.py` automated logs:*
-
-> **STATUS:** PEAK_PERFORMANCE
-> **RECORD:** 3.65e+06 Enstrophy
-> **HYPOTHESIS:** The scientist module has consolidated a new hypothesis:
-> 
-> 
-> 
-> **TREND:** Explosive Growth (+24.1%)
+* **The Challenge:** Stabilize high-energy turbulence in a spectral simulation without knowing the Navier-Stokes equations.
+* **The Solution:** Atom uses a **Spectral DNS Solver** to perceive the fluid in frequency space (-space).
+* **The Discovery:** The "Scientist" module successfully re-derived the **Kolmogorov Length Scale** relationships and identified a new control law for vorticity cancellation.
+* **Key Tech:** Spectral Navier-Stokes, Intrinsic Curiosity Module (ICM), Adaptive Plasticity.
 
 ---
 
-## Tech Stack
+## Domain 2: Financial Markets (Markets)
 
-* **Core Logic:** Python 3.10+
-* **Neural Dynamics:** `torch`, `ncps` (Neural Circuit Policies)
-* **Symbolic AI:** `pysr` (Julia/Python bridge)
-* **Physics:** `numpy`, `scipy.fft`
-* **LLM Backend:** `ollama`, `requests`
-* **Visualization:** HTML5 Canvas, Vanilla JS, Threaded HTTP Server
+*Formerly "Poseidon"*
+
+<div align="center">
+<img src="[https://via.placeholder.com/800x400.png?text=Atom+Markets+Dashboard+(Placeholder](https://www.google.com/search?q=https://via.placeholder.com/800x400.png%3Ftext%3DAtom%2BMarkets%2BDashboard%2B(Placeholder))" alt="Atom Markets Dashboard">
+<p><em>Figure 2: Atom treating the Order Book as a compressible fluid. Left: Lagrangian-Eulerian Liquidity Map. Right: Conformal Risk Shield.</em></p>
+</div>
+
+Applying the same fluid dynamics architecture to High-Frequency Trading. Atom treats market liquidity not as discrete numbers, but as a **compressible fluid**.
+
+* **The Challenge:** Navigate financial flash crashes where standard statistical models fail due to infinite volatility.
+* **The Solution:**
+* **Helmholtz Decomposition:** Atom separates price action into **Flow** (Institutional Trend) and **Vorticity** (Retail Noise/Turbulence).
+* **Liquid Brain:** Uses **Closed-form Continuous-time (CfC)** networks that cannot experience "exploding gradients," allowing the agent to remain stable even during market collapses.
+
+
+* **The Discovery:** Market "Viscosity" (Friction) is dynamic. Atom formulated a "Reynolds Number for Finance" to detect phase transitions between laminar (safe) and turbulent (risk) regimes.
 
 ---
 
-## ⚠️ Status & License
+## Domain 3: 3D Aerodynamics (Real-World)
 
-**Status:** Research Prototype (v3.0 - Adaptive Plasticity Engaged)
-**License:** Closed Source / Private Research
+*Formerly "Atom v3"*
 
-*This project is a study in autopoietic machine intelligence and is not available for public distribution.*
+<div align="center">
+<img src="[https://via.placeholder.com/800x400.png?text=Atom+3D+Holographic+View+(Placeholder](https://www.google.com/search?q=https://via.placeholder.com/800x400.png%3Ftext%3DAtom%2B3D%2BHolographic%2BView%2B(Placeholder))" alt="Atom 3D Aerodynamics">
+<p><em>Figure 3: 3D Volumetric Visualization of the Atom Wind Tunnel using Lattice Boltzmann Methods.</em></p>
+</div>
+
+The most advanced deployment, moving from 2D approximations to **3D Volumetric Reality**.
+
+* **The Challenge:** Minimize drag on arbitrary 3D objects in a digital wind tunnel.
+* **The Solution:**
+* **Lattice Boltzmann Method (LBM):** Atom interacts with a real-time D3Q19 physics engine.
+* **Wake/Sleep Cycle:** Atom introduces a biological learning cycle. It interacts in real-time ("Wake"), then goes offline ("Sleep") to distill its experiences into symbolic theories using high-fidelity D3Q27 "Ground Truth" simulations.
+* **3D Vision:** Uses **3D Equivariant FNOs** to perceive volumetric flow fields.
+
+
+* **The Discovery:** The system learned to manipulate the "boundary layer" of air, effectively greasing the air around the object to reduce drag.
+
+---
+
+## The Unified Architecture
+
+Under the hood, all three domains share the exact same source code for cognition.
+
+| Component | Technology | Purpose |
+| --- | --- | --- |
+| **Eyes** | **Fourier Neural Operators (FNO)** | Compresses Reality (Pixels/Grids) into Latent Physics. |
+| **Brain** | **Liquid Time-Constants (LTC)** | Continuous-time control immune to time-step irregularity. |
+| **Skeleton** | **Nano-PCA Manifold** | "Bones" that prevent the neural state from hallucinating invalid physics. |
+| **Mind** | **Symbolic Regression (PySR)** | Asynchronous thread that writes LaTeX equations explaining the world. |
+| **Memory** | **Hindsight Experience Replay** | Re-labels failures as successes to learn from mistakes. |
+
+---
+
+## ⚠️ Research Status
+
+**Project Atom** is a closed-source research initiative in **Autopoietic Machine Intelligence**.
+
+* **Status:** Active Research
+* **Hardware:** Optimized for Apple Silicon (Metal/MPS) & NVIDIA H100 (CUDA).
+* **License:** Proprietary / Internal Use Only.
+
+*This documentation demonstrates the generalization capabilities of the Atom Neuro-Symbolic Core. No source code or model weights are provided.*
