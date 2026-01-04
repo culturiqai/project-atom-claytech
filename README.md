@@ -1,5 +1,5 @@
 <div align="center">
-<img src="ATOM.png" width="100%" controls autoplay loop muted></img>
+<img src="atom-cover.png" width="100%" controls autoplay loop muted></img>
 </div>
 
 # Project Atom // Neuro-Symbolic General Intelligence
