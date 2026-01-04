@@ -12,7 +12,7 @@ The system bridges the gap between **System 1 (Fast/Implicit)** cognition, imple
 
 <div align="center">
 <img src="ATOM.gif" width="100%" controls autoplay loop muted>
-<p><em>Figure 1: The Genesis Module autonomously deriving the Navier-Stokes equations while stabilizing 2D turbulence in real-time.</em></p>
+<p><em>Figure 1: The Genesis Module autonomously re-deriving equations while stabilizing 2D turbulence in real-time.</em></p>
 </div>
 
 ---
