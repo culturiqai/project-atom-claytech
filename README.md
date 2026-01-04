@@ -98,7 +98,7 @@ In this domain, Atom operates as a **Simulation-Based Inference (SBI)** engine t
 
 * **Problem Statement:** High-energy photons from distant Blazars are theorized to arrive "late" if spacetime is discrete. However, distinguishing this quantum delay from intrinsic source turbulence is currently impossible.
 
-**Methodology:**
+**Proposed Methodology:**
 
 * **Teacher (Simulation):** Trains on  relativistic hydrodynamic simulations of Blazar jets to define the manifold of "physically valid" flares.
 * **Student (Liquid Brain):** Learns to model the chaotic temporal evolution of the jet. When analyzing real telescope data (CTA/Fermi), it identifies QG delays as "anomalies" or "stress" deviating from standard physics.
