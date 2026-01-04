@@ -37,7 +37,7 @@ The **Genesis** module serves as Atom's fundamental proving ground—a controlle
 
 * **Problem Statement:** Stabilize high-energy turbulence within a spectral simulation without prior knowledge of fluid dynamics.
 * **Methodology:** Atom interfaces with a **Spectral DNS Solver**, perceiving fluid dynamics purely in the frequency domain (-space).
-* **Key Discovery:** The Scientist module successfully re-derived the **Kolmogorov Length Scale** relationships and autonomously formulated a control law for vorticity cancellation.
+* **Key Discovery:** The Scientist module re-derived relationships and autonomously formulated a control law for vorticity cancellation.
 * **Core Technologies:** Spectral Navier-Stokes, Intrinsic Curiosity Module (ICM), Adaptive Plasticity.
 
 ---
