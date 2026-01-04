@@ -7,7 +7,7 @@
 It bridges the gap between **System 1 (Fast Intuition)** using Liquid Neural Networks and **System 2 (Slow Reasoning)** using Symbolic Regression, allowing it to "understand" physics rather than just mimicking it.
 
 <div align="center">
-<video src="ATOM.gif" width="100%" controls autoplay loop muted></video>
+<img src="ATOM.gif" width="100%" controls autoplay loop muted></img>
 <p><em>Figure 1: Atom // Genesis Module discovering the Navier-Stokes equations in real-time while stabilizing 2D turbulence.</em></p>
 </div>
 
