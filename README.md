@@ -85,7 +85,7 @@ The most advanced deployment, scaling the architecture from 2D approximations to
 
 ---
 
-## 🌌 Domain 4: Quantum Cosmology (PROBE-LIV) - Experiment Proposal
+## 🌌 Domain 4: Quantum Cosmology (PROBE-LIV) - Experiment Proposal Example
 
 **The Frontier: Hunting for the Pixelation of Spacetime.**
 
