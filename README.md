@@ -85,6 +85,26 @@ The most advanced deployment, moving from 2D approximations to **3D Volumetric R
 
 ---
 
+##cDomain 4: Quantum Cosmology (PROBE-LIV)
+
+The Frontier: Hunting for the Pixelation of Spacetime.
+
+<div align="center">
+<img src="https://via.placeholder.com/800x400.png?text=Atom+LIV+Detection:+Dispersion+Recovery" alt="Atom LIV Analysis">
+<p><em>Figure 4: Atom's Scientist module successfully "focusing" a Blazar flare by subtracting the energy-dependent time lag caused by discrete spacetime.</em></p>
+</div>
+
+In this domain, Atom functions as a Simulation-Based Inference (SBI) engine to test for Lorentz Invariance Violation (LIV)—the theory that the speed of light is not constant at the Planck scale.
+
+The Challenge: High-energy photons from distant Blazars should arrive "late" if spacetime is discrete. However, intrinsic turbulence in the source also causes delays. Current physics cannot distinguish between "Source Noise" and "Quantum Gravity Signal"
+
+The Atom Solution:
+- Teacher (Simulation): Atom trains on $10^6$ relativistic hydrodynamic simulations of Blazar jets to learn the manifold of "physically valid" flares
+- Student (Liquid Brain): The Neural Skeleton learns to model the chaotic evolution of the jet. When analyzing real telescope data (CTA/Fermi), it treats the QG delay as an "anomaly" or "stress" that deviates from the learned physics.
+- Scientist (Symbolic): It effectively "derotates" the dispersion to minimize entropy, discovering the lag law:$$\Delta t = \alpha \cdot E \cdot z + \beta_{\text{intrinsic}}$$
+
+The Validation: In Proof-of-Concept simulations, Atom successfully recovered the Quantum Gravity Scale ($E_{QG}$) by statistically minimizing the "blur" of the photon arrival times, turning the universe into a focused lens.
+
 ## The Unified Architecture
 
 Under the hood, all three domains share the exact same source code for cognition.
