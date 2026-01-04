@@ -1,3 +1,7 @@
+<div align="center">
+<img src="ATOM.png" width="100%" controls autoplay loop muted></img>
+</div>
+
 # Project Atom // Neuro-Symbolic General Intelligence
 
 **One Architecture. Three Worlds.**
