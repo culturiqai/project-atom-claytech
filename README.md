@@ -90,7 +90,7 @@ The most advanced deployment, moving from 2D approximations to **3D Volumetric R
 The Frontier: Hunting for the Pixelation of Spacetime.
 
 <div align="center">
-<img src="https://via.placeholder.com/800x400.png?text=Atom+LIV+Detection:+Dispersion+Recovery" alt="Atom LIV Analysis">
+<img src="liv.png" width="100%" controls autoplay loop muted></img>
 <p><em>Figure 4: Atom's Scientist module successfully "focusing" a Blazar flare by subtracting the energy-dependent time lag caused by discrete spacetime.</em></p>
 </div>
 
