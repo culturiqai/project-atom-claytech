@@ -97,7 +97,9 @@ The most advanced deployment, scaling the architecture from 2D approximations to
 In this domain, Atom operates as a **Simulation-Based Inference (SBI)** engine to test for Lorentz Invariance Violation (LIV)—the hypothesis that the speed of light is energy-dependent at the Planck scale.
 
 * **Problem Statement:** High-energy photons from distant Blazars are theorized to arrive "late" if spacetime is discrete. However, distinguishing this quantum delay from intrinsic source turbulence is currently impossible.
-* **Methodology:**
+
+**Methodology:**
+
 * **Teacher (Simulation):** Trains on  relativistic hydrodynamic simulations of Blazar jets to define the manifold of "physically valid" flares.
 * **Student (Liquid Brain):** Learns to model the chaotic temporal evolution of the jet. When analyzing real telescope data (CTA/Fermi), it identifies QG delays as "anomalies" or "stress" deviating from standard physics.
 * **Scientist (Symbolic):** "Derotates" the dispersion to minimize signal entropy, isolating the dispersion law:
