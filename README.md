@@ -47,7 +47,7 @@ The Genesis module represents Atom's "playground"—a pure environment to test i
 *Formerly "Poseidon"*
 
 <div align="center">
-<img src="[https://via.placeholder.com/800x400.png?text=Atom+Markets+Dashboard+(Placeholder](https://www.google.com/search?q=https://via.placeholder.com/800x400.png%3Ftext%3DAtom%2BMarkets%2BDashboard%2B(Placeholder))" alt="Atom Markets Dashboard">
+<img src="poseidon.gif" width="100%" controls autoplay loop muted></img>
 <p><em>Figure 2: Atom treating the Order Book as a compressible fluid. Left: Lagrangian-Eulerian Liquidity Map. Right: Conformal Risk Shield.</em></p>
 </div>
 
@@ -68,7 +68,7 @@ Applying the same fluid dynamics architecture to High-Frequency Trading. Atom tr
 *Formerly "Atom v3"*
 
 <div align="center">
-<img src="[https://via.placeholder.com/800x400.png?text=Atom+3D+Holographic+View+(Placeholder](https://www.google.com/search?q=https://via.placeholder.com/800x400.png%3Ftext%3DAtom%2B3D%2BHolographic%2BView%2B(Placeholder))" alt="Atom 3D Aerodynamics">
+<img src="atom-cfd.png" width="100%" controls autoplay loop muted></img>
 <p><em>Figure 3: 3D Volumetric Visualization of the Atom Wind Tunnel using Lattice Boltzmann Methods.</em></p>
 </div>
 
