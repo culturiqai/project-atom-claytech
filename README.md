@@ -243,6 +243,68 @@ The transition from the JAX Oracle (Exact Physics) to the AI Agent (Surrogate) y
 
 ---
 
+## 🚀 Quick Start (Run the Demos)
+
+The repository includes three self-contained demos that run on standard CPU/GPU (Apple Silicon or CUDA).
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+cd case-study/
+```
+
+1. AI Inverse Design Agent
+Watch the system autonomously optimize a shape to minimize drag using differentiable physics (Gradient Descent).
+
+Bash
+
+```bash
+python src/utils/inverse_design.py
+# Output: Generates UI and performance plots.
+```
+
+
+2. Differentiable Physics Kernel
+Run the raw JAX-LBM solver to validate the numerical stability.
+
+
+
+```bash
+python src/utils/lbm_oracle.py # (Custom - 2D Output)
+
+python src/utils/oracle.py # (Custom - 3D Output)
+
+python simulation/car_sim_pro.py # (Needs XLB - Library 3D LBM and input file "lambo.stl")
+
+
+```
+⚠️ Note on Production Solver
+The file car_sim_pro.py is the production-grade 3D solver used for the Lamborghini case study. It requires the xlb framework and a valid STL file (lambo.stl) to execute. It is provided here for architectural reference.
+
+
+### 3. Real-Time Interactive 2D Wind Tunnel
+Draw obstacles with your mouse and watch the fluid adapt in real-time.
+```bash
+python srcutils/visual.py
+# Controls:
+# - Left Click: Draw Blob
+# - Right Click: Erase
+# - 'Q': Quit
+```
+
+### Reference Files:
+
+```bash
+- src/surrogate/cp_fno.py # Reference - The Architecture
+- src/surrogate/equvivarant.py # Reference - The Math
+- simulation/car_diagnostics.py # Reference - The Analytics
+
+```
+
+
 ## 5. Research Status & Licensing
 
 **Proprietary / Internal Use Only.**
