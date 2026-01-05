@@ -1,6 +1,5 @@
 """
-JAX-LBM Interactive Wind Tunnel ("God Mode")
-Author: Ex-NVIDIA Director of Physical AI
+JAX-LBM Interactive Wind Tunnel
 Date: Dec 8, 2025
 
 Instructions:
