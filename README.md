@@ -288,7 +288,7 @@ The file car_sim_pro.py is the production-grade 3D solver used for the Lamborghi
 ### 3. Real-Time Interactive 2D Wind Tunnel
 Draw obstacles with your mouse and watch the fluid adapt in real-time.
 ```bash
-python srcutils/visual.py
+python src/utils/visual.py
 # Controls:
 # - Left Click: Draw Blob
 # - Right Click: Erase
