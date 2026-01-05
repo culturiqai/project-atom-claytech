@@ -67,7 +67,7 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 </p>
 
 <p align="center">
-  <em>Figure 1: Data flow from FNO Encoder to Symbolic Supervisor.</em>
+  <em>Heatmap of Limit Order Book liquidity with overlaid vector field showing "flow" direction.</em>
 </p>
 
 
@@ -83,7 +83,7 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 </p>
 
 <p align="center">
-  <em>Figure 1: Data flow from FNO Encoder to Symbolic Supervisor.</em>
+  <em>3D Wind Tunnel simulation showing streamlines adjusting around a mesh.</em>
 </p>
 
 
@@ -99,7 +99,7 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 </p>
 
 <p align="center">
-  <em>Figure 1: Data flow from FNO Encoder to Symbolic Supervisor.</em>
+  <em>Side-by-side plot showing "Raw Telescope Data" (tilted) vs. "LIV-Corrected Data" (focused).</em>
 </p>
 
 
@@ -115,20 +115,14 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 
 ---
 
-## 5. Research Status & Licensing
 
-**Proprietary / Internal Use Only.**
-This repository contains documentation and proof-of-concept benchmarks for the Atom architecture. Source code, model weights, and specific hyperparameters are closed-source and not available for public distribution.
-
-* **Principal Investigator:** Aditya Tiwari
-* **Entity:** Culturiq Research Pvt Ltd.
 
 ---
 
-# Open Case Study: Autonomous Aerodynamic Optimization using Differentiable Physics and Inverse Design (Code "case-study")
+# Open Case Study: Autonomous Aerodynamic Optimization using Differentiable Physics and Inverse Design (Repo-code "/case-study")
 
 ## Abstract
-A High-Fidelity Digital Wind Tunnel that combines JAX-based Lattice Boltzmann CFD with Equivariant Fourier Neural Operators to accelerate aerodynamic design optimization by 1600% on low resolution grids an Re values - Metal CPU.
+A High-Fidelity Digital Wind Tunnel that combines JAX-based Lattice Boltzmann CFD with Equivariant Fourier Neural Operators to accelerate aerodynamic design optimization by 1600% on low resolution grids an Re values, using limited compute resources (Metal CPU).
 
 ---
 
@@ -249,4 +243,14 @@ The transition from the JAX Oracle (Exact Physics) to the AI Agent (Surrogate) y
 
 ***Speedup:*** 16x Faster inference compared to the JAX solver.
 ***Fidelity:*** Mass conservation violation is kept near $10^{-8}$, which is negligible for engineering design iterations.
+
+---
+
+## 5. Research Status & Licensing
+
+**Proprietary / Internal Use Only.**
+This repository contains documentation and proof-of-concept benchmarks for the Atom architecture. Source code, model weights, and specific hyperparameters are closed-source and not available for public distribution.
+
+* **Principal Investigator:** Aditya Tiwari
+* **Entity:** Culturiq Research Pvt Ltd.
 
