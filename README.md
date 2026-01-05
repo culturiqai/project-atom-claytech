@@ -246,7 +246,7 @@ The transition from the JAX Oracle (Exact Physics) to the AI Agent (Surrogate) y
 ## 5. Research Status & Licensing
 
 **Proprietary / Internal Use Only.**
-Looking for a fast pace team to scale this. This repository contains documentation and proof-of-concept benchmarks for the Atom architecture. Source code, model weights, and specific hyperparameters are closed-source and currently not available for public distribution.
+Looking for a fast-paced team to scale this. This repository contains documentation and proof-of-concept benchmarks for the Atom architecture. Source code, model weights, and specific hyperparameters are closed-source and currently not available for public distribution.
 
 * **Principal Researcher:** Aditya Tiwari
 * **Entity:** Culturiq Research Pvt Ltd.
