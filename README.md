@@ -105,7 +105,7 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 
 ---
 
-## 4. Performance Benchmarks
+## 4. Performance Benchmarks (See open Benchmarks in Case-Study Below)
 
 * **Inference Latency:** 16ms (vs. 120s for standard CFD on equivalent grid).
 * **Conservation Error:** Mass violation .
