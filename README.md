@@ -111,12 +111,6 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 * **Conservation Error:** Mass violation .
 * **Hardware Optimization:** Custom JAX kernels optimized for Apple Silicon (Metal/MPS) and NVIDIA H100 (CUDA).
 
-<p align="center">
-  <img src="assets/flowchart.png" width="800" title="Atom Architecture">
-</p>
-
-<p align="center">
-  <em>Figure 1: Data flow from FNO Encoder to Symbolic Supervisor.</em>
 </p>
 
 ---
@@ -163,8 +157,8 @@ This is a pure-JAX implementation of the LBM solver, stripped of external depend
 ### Hardware Awareness & Constraints
 The current simulation parameters (Re = 1000, Grid = 384x192x192) were chosen to accommodate local development on Apple Silicon (M1/M2/M3).VRAM Limit: The car_sim_pro.py script explicitly forces single-device execution via XLA_FLAGS to optimize for Unified Memory constraints.Scaling: While the physics model (KBC) is capable of handling automotive Reynolds numbers ($Re > 10^6$), the resolution was capped to fit within 16GB-32GB RAM. The pipeline is designed to scale horizontally on GPU clusters (A100/H100) for production runs.
 
-![LBM Simulation 1 ](gallery/pro_sim_lambo_re1000_mach0-025_steps4000.png)
-![LBM Simulation 2](gallery/toy_sim_lambo_re2000_steps2000.png)
+![LBM Simulation 1 ](assets/pro_sim_lambo_re1000_mach0-025_steps4000.png)
+![LBM Simulation 2](assets/toy_sim_lambo_re2000_steps2000.png)
 
 
 ---
@@ -176,7 +170,7 @@ Before tackling full 3D flow, a 2D Proof-of-Concept (POC) pipeline was establish
 
 ***Goal:*** To teach the FNO how flow separates around sharp corners and how wakes rotate with the object.
 
-![LBM Dataset 2D](gallery/lbm_diversity_mosaic.png)
+![LBM Dataset 2D](assets/lbm_diversity_mosaic.png)
 
 ### 3. The Surrogate Architecture: PI-E-CP-FNO
 
@@ -194,10 +188,10 @@ The "Brain" of the system is a Physics-Informed Equivariant Causal Fourier Neura
 
 It is mathematically impossible for the AI to create or destroy mass.Causal / Conservation Constraints:The model integrates with oracle.py during training to penalize residuals (Physics Loss), ensuring the flow satisfies the Navier-Stokes equations.
 
-![Error Histogram](gallery/fno_error_histogram.png)
+![Error Histogram](assets/fno_error_histogram.png)
 
 
-![FNO Prediction Example](gallery/fno_prediction_190.png)
+![FNO Prediction Example](assets/fno_prediction_190.png)
 
 Figure: The Surrogate (Middle) accurately reconstructing the Von Kármán vortex street predicted by the Oracle (Left).
 
@@ -210,7 +204,7 @@ The ultimate goal of this pipeline is Automated Aerodynamic Design.
 ***Mechanism:*** We define a shape via a Latent Space (e.g., a Signed Distance Field initialized as a geometric primitive).
 ***Optimization:*** We use Gradient Descent on the latent variables. Because the pipeline is differentiable, we can calculate $\frac{\partial \text{Drag}}{\partial \text{Shape}}$.
 
-![▶️ **Optimization Loop**](gallery/ezgif-2e747d51400a7b29.gif)
+![▶️ **Optimization Loop**](assets/ezgif-2e747d51400a7b29.gif)
 
 ***Application (2D Lamborghini Spoiler POC):*** This component was deployed to optimize the 2D side profile of the Lamborghini.
 
@@ -229,7 +223,7 @@ Visualization is critical for verifying physical realism. The car_diagnostics.py
 - Separation Risk: Uses pressure gradients ($\nabla C_p$) to detect where air is tearing off the surface.
 - Pitch Moment: Calculates aerodynamic balance (Understeer vs. Oversteer).
 
-![Car Diagnostics](gallery/pro_sim_lambo_diagnostics.png)
+![Car Diagnostics](assets/pro_sim_lambo_diagnostics.png)
 
 
 Feedback Loop: These metrics are not just for display; they serve as "Rewards" for the Inverse Design agent.
@@ -242,7 +236,7 @@ Feedback Loop: These metrics are not just for display; they serve as "Rewards" f
 *   **Conformal Prediction:** Implemented Split Conformal Calibration to provide rigorous uncertainty bands. The system guarantees that the true physics lies within the predicted range with probability $1-\alpha$.
 *   **Adversarial Auditing:** A "Red Team" agent uses Differential Evolution to find wind conditions that maximize model uncertainty, effectively identifying "Blind Spots" in the physics model.
 
-![Pareto Frontier](gallery/benchmark_frontier.png)
+![Pareto Frontier](assets/benchmark_frontier.png)
 *Fig 4. Performance Frontier: The final designs push the Pareto efficiency boundary significantly beyond the initial seed population.*
 
 ---
