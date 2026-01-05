@@ -125,10 +125,10 @@ This repository contains documentation and proof-of-concept benchmarks for the A
 
 ---
 
-# Open Case Study: Autonomous Aerodynamic Optimization using Differentiable Physics and Generative AI
+# Open Case Study: Autonomous Aerodynamic Optimization using Differentiable Physics and Inverse Design (Code "case-study")
 
 ## Abstract
-A High-Fidelity Digital Wind Tunnel that combines JAX-based Lattice Boltzmann CFD with Equivariant Fourier Neural Operators to accelerate aerodynamic design optimization by 1600%.
+A High-Fidelity Digital Wind Tunnel that combines JAX-based Lattice Boltzmann CFD with Equivariant Fourier Neural Operators to accelerate aerodynamic design optimization by 1600% on low resolution grids an Re values - Metal CPU.
 
 ---
 
