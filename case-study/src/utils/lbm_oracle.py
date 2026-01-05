@@ -1,6 +1,5 @@
 """
 JAX-LBM: Differentiable, Batched, GPU-Accelerated Fluid Solver.
-Author: Ex-NVIDIA Director of Physical AI
 Date: Dec 7, 2025
 
 Architecture:
