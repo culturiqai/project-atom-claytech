@@ -1,6 +1,5 @@
 """
 JAX-LBM Final Design Studio
-Author: Ex-NVIDIA Director of Physical AI
 Date: Dec 8, 2025
 
 Features:
