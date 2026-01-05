@@ -126,13 +126,23 @@ Inverse Design: A differentiable optimization loop for discovering optimal aerod
 To balance accuracy with differentiability, the project utilizes two distinct solver architectures.
 
 ### A. The "Teacher": XLB Production Solver (car_sim_pro.py)
-This is the Gold Standard simulator used to generate training data. It is built on the XLB framework and is designed for stability and turbulence modeling.Method: Lattice Boltzmann Method (LBM) using the D3Q27 velocity set (27 discrete velocities per voxel) for isotropic accuracy.Collision Model: KBC (Entropic-Stabilized) collision. This advanced model maximizes entropy to self-stabilize, allowing simulations to run without crashing even when under-resolved.Role: Generates the "Ground Truth" turbulent wake data.
+This is the Gold Standard simulator used to generate training data. It is built on the XLB framework and is designed for stability and turbulence modeling.
+
+- Method: Lattice Boltzmann Method (LBM) using the D3Q27 velocity set (27 discrete velocities per voxel) for isotropic accuracy.
+- Collision Model: KBC (Entropic-Stabilized) collision. This advanced model maximizes entropy to self-stabilize, allowing simulations to run without crashing even when under-resolved.
+- Role: Generates the "Ground Truth" turbulent wake data.
 
 ### B. The "Grader": JAX Differentiable Kernel (oracle.py)
-This is a pure-JAX implementation of the LBM solver, stripped of external dependencies.Method: D3Q19 (Standard) or D2Q9 (2D) lattice.Differentiation: Because it is written in pure JAX, it supports automatic differentiation. We can backpropagate gradients through the fluid simulation.Role: Acts as the Physics Loss Function. During training, the AI's predictions are fed into this kernel to check if they violate mass or momentum conservation.
+This is a pure-JAX implementation of the LBM solver, stripped of external dependencies.Method: D3Q19 (Standard) or D2Q9 (2D) lattice.
+
+- Differentiation: Because it is written in pure JAX, it supports automatic differentiation. We can backpropagate gradients through the fluid simulation.
+- Role: Acts as the Physics Loss Function. During training, the AI's predictions are fed into this kernel to check if they violate mass or momentum conservation.
 
 ### Hardware Awareness & Constraints
-The current simulation parameters (Re = 1000, Grid = 384x192x192) were chosen to accommodate local development on Apple Silicon (M1/M2/M3).VRAM Limit: The car_sim_pro.py script explicitly forces single-device execution via XLA_FLAGS to optimize for Unified Memory constraints.Scaling: While the physics model (KBC) is capable of handling automotive Reynolds numbers ($Re > 10^6$), the resolution was capped to fit within 16GB-32GB RAM. The pipeline is designed to scale horizontally on GPU clusters (A100/H100) for production runs.
+The current simulation parameters (Re = 1000, Grid = 384x192x192) were chosen to accommodate local development on Apple Silicon (M1/M2/M3).
+
+- VRAM Limit: The car_sim_pro.py script explicitly forces single-device execution via XLA_FLAGS to optimize for Unified Memory constraints.
+- Scaling: While the physics model (KBC) is capable of handling automotive Reynolds numbers ($Re > 10^6$), the resolution was capped to fit within 16GB-32GB RAM. The pipeline is designed to scale horizontally on GPU clusters (A100/H100) for production runs.
 
 ![LBM Simulation 1 ](assets/pro_sim_lambo_re1000_mach0-025_steps4000.png)
 ![LBM Simulation 2](assets/toy_sim_lambo_re2000_steps2000.png)
@@ -143,27 +153,31 @@ The current simulation parameters (Re = 1000, Grid = 384x192x192) were chosen to
 ### 2. The 2D Surrogate Pipeline (lbm_oracle.py)
 Before tackling full 3D flow, a 2D Proof-of-Concept (POC) pipeline was established to validate the Neural Architecture.
 
-***Implementation:*** lbm_oracle.py implements a 2D (D2Q9) solver with Zou-He velocity inlets.Data Generation: This script was used to generate a Diversity Mosaic—a dataset of thousands of variations of geometric shapes (Rectangles, L-Shapes, Rotated Polygons) at varying flow regimes ($Re \approx 20 - 200$).
+***Implementation:*** 
+- lbm_oracle.py implements a 2D (D2Q9) solver with Zou-He velocity inlets.
+- Data Generation: This script was used to generate a Diversity Mosaic—a dataset of thousands of variations of geometric shapes (Rectangles, L-Shapes, Rotated Polygons) at varying flow regimes ($Re \approx 20 - 200$).
 
 ***Goal:*** To teach the FNO how flow separates around sharp corners and how wakes rotate with the object.
 
 ![LBM Dataset 2D](assets/lbm_diversity_mosaic.png)
 
-### 3. The Surrogate Architecture: PI-E-CP-FNO
+### 3. The Surrogate Architecture:
 
 The "Brain" of the system is a Physics-Informed Equivariant Fourier Neural Operator. Architected to enforce physical laws by construction. 
 
 ***Note:*** This is currently a 2D POC implementation.
 
-#### Key Architectural Features (causal_fno.py, equivariant.py)
+#### Key Architectural Features (cp_fno.py, equivariant.py)
 
-***Equivariance (D4 / C4 Symmetry):*** Implemented via Steerable Spectral Convolutions.The network understands that physics rotates with the object. If the input object rotates 90 degrees, the predicted flow field automatically rotates 90 degrees without relearning. This reduces the data requirement by ~4x.
+***Equivariance (D4 / C4 Symmetry):*** Implemented via Steerable Spectral Convolutions.
+- The network understands that physics rotates with the object. If the input object rotates 90 degrees, the predicted flow field automatically rotates 90 degrees without relearning. This reduces the data requirement by ~4x.
 
 ***Helmholtz Decomposition Head:*** The model does not predict Velocity $(u, v)$ directly.Instead, it predicts a Stream Function ($\psi$).Velocity is derived mathematically: $u = \partial_y \psi, v = -\partial_x \psi$.
 
 ***Result:*** The predicted flow has Zero Divergence ($\nabla \cdot \mathbf{u} = 0$) by definition. 
 
-It is mathematically impossible for the AI to create or destroy mass.Causal / Conservation Constraints:The model integrates with oracle.py during training to penalize residuals (Physics Loss), ensuring the flow satisfies the Navier-Stokes equations.
+It is mathematically impossible for the AI to create or destroy mass.
+Causal / Conservation Constraints: The model integrates with oracle.py during training to penalize residuals (Physics Loss), ensuring the flow satisfies the Navier-Stokes equations.
 
 ![Error Histogram](assets/fno_error_histogram.png)
 
@@ -174,7 +188,7 @@ Figure: The Surrogate (Middle) accurately reconstructing the Von Kármán vortex
 
 ---
 
-### 4. Inverse Design Component (high_fidelity_design.py)
+### 4. Inverse Design Component (inverse_design.py)
 
 The ultimate goal of this pipeline is Automated Aerodynamic Design.
 
@@ -209,7 +223,7 @@ Feedback Loop: These metrics are not just for display; they serve as "Rewards" f
 
 ---
 
-### 4. Safety & Verification (The Auditor)
+### 4. Safety & Verification (The Auditor) - Not in repo
 **Objective:** Ensure AI outputs are engineering-grade and trustworthy.
 
 *   **Conformal Prediction:** Implemented Split Conformal Calibration to provide rigorous uncertainty bands. The system guarantees that the true physics lies within the predicted range with probability $1-\alpha$.
@@ -234,6 +248,6 @@ The transition from the JAX Oracle (Exact Physics) to the AI Agent (Surrogate) y
 **Proprietary / Internal Use Only.**
 Looking for a fast pace team to scale this. This repository contains documentation and proof-of-concept benchmarks for the Atom architecture. Source code, model weights, and specific hyperparameters are closed-source and currently not available for public distribution.
 
-* **Principal Investigator:** Aditya Tiwari
+* **Principal Researcher:** Aditya Tiwari
 * **Entity:** Culturiq Research Pvt Ltd.
 
