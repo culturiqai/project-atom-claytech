@@ -256,7 +256,7 @@ pip install -r requirements.txt
 cd case-study/
 ```
 
-1. AI Inverse Design Agent
+### 1. AI Inverse Design Agent
 Watch the system autonomously optimize a shape to minimize drag using differentiable physics (Gradient Descent).
 
 Bash
@@ -267,7 +267,7 @@ python src/utils/inverse_design.py
 ```
 
 
-2. Differentiable Physics Kernel
+### 2. Differentiable Physics Kernel
 Run the raw JAX-LBM solver to validate the numerical stability.
 
 
