@@ -1,5 +1,5 @@
 """
-Physics-Aware Causal FNO Architecture.
+Physics-Aware FNO Architecture.
 FIXED: Strict Helmholtz Head (Stream Function Only) for Zero Divergence.
 FIXED: Forward pass now uses Spectral Convs and correct Permutations.
 """
