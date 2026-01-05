@@ -168,13 +168,13 @@ Before tackling full 3D flow, a 2D Proof-of-Concept (POC) pipeline was establish
 
 ### 3. The Surrogate Architecture: PI-E-CP-FNO
 
-The "Brain" of the system is a Physics-Informed Equivariant Causal Fourier Neural Operator. Architected to enforce physical laws by construction. 
+The "Brain" of the system is a Physics-Informed Equivariant Fourier Neural Operator. Architected to enforce physical laws by construction. 
 
 ***Note:*** This is currently a 2D POC implementation.
 
 #### Key Architectural Features (causal_fno.py, equivariant.py)
 
-***Equivariance (D_4 / C_4 Symmetry):*** Implemented via Steerable Spectral Convolutions.The network understands that physics rotates with the object. If the input object rotates 90 degrees, the predicted flow field automatically rotates 90 degrees without relearning. This reduces the data requirement by ~4x.
+***Equivariance (D4 / C4 Symmetry):*** Implemented via Steerable Spectral Convolutions.The network understands that physics rotates with the object. If the input object rotates 90 degrees, the predicted flow field automatically rotates 90 degrees without relearning. This reduces the data requirement by ~4x.
 
 ***Helmholtz Decomposition Head:*** The model does not predict Velocity $(u, v)$ directly.Instead, it predicts a Stream Function ($\psi$).Velocity is derived mathematically: $u = \partial_y \psi, v = -\partial_x \psi$.
 
