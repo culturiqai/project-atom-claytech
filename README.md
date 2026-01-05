@@ -133,7 +133,7 @@ This repository implements a full-stack workflow:
 
 Ground Truth Generation: High-fidelity Lattice Boltzmann simulations.
 
-Surrogate Modeling: A Physics-Informed, Equivariant, Causal Fourier Neural Operator (PI-E-CP-FNO).
+Surrogate Modeling: A Physics-Informed(Helmholtz), Equivariant, Fourier Neural Operator.
 
 Inverse Design: A differentiable optimization loop for discovering optimal aerodynamic shapes.
 
