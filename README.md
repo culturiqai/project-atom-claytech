@@ -12,7 +12,7 @@
 
 Atom is a Neuro-Symbolic framework designed to solve high-dimensional Partial Differential Equations (PDEs) and chaotic time-series where traditional numerical methods are computationally prohibitive. The architecture integrates continuous-time neural networks (Liquid Time-Constant networks) for control with asynchronous Symbolic Regression (PySR) for equation discovery.
 
-This framework is currently benchmarked across four distinct dynamical systems: Computational Fluid Dynamics (CFD), Financial Market Microstructure, Biological Plasticity, and High-Energy Astrophysics. By constraining neural latent states to physically valid manifolds, Atom achieves a 1000x inference speedup over standard solvers while maintaining strict conservation laws (e.g., mass, momentum).
+This framework is currently benchmarked across four distinct dynamical systems: Computational Fluid Dynamics (CFD), Biological Plasticity, and High-Energy Astrophysics. By constraining neural latent states to physically valid manifolds, Atom achieves a projected 100x+ inference speedup over standard solvers while maintaining strict conservation laws (e.g., mass, momentum).
 
 ---
 
@@ -54,24 +54,7 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
   <em>Figure 2: Atom autonomously deriving vorticity cancellation laws in real-time</em>
 </p>
 
-
-### Domain 2: Financial Market Microstructure ("Poseidon")
-
-**Objective:** Modeling Limit Order Book (LOB) dynamics as a compressible fluid.
-
-* **Methodology:** Application of Helmholtz Decomposition to LOB data. By separating price action into **Irrotational Flow** (Institutional Trend) and **Solenoidal Flow** (Noise), the system calculates an effective "Financial Reynolds Number."
-* **Key Result:** Dynamic modulation of trading frequency based on phase transitions between laminar (low volatility) and turbulent (high volatility) market regimes.
-
-<p align="center">
-  <img src="assets/poseidon.gif" width="800" title="Atom Architecture">
-</p>
-
-<p align="center">
-  <em>Heatmap of Limit Order Book liquidity with overlaid vector field showing "flow" direction.</em>
-</p>
-
-
-### Domain 3: Industrial Aerodynamics ("Atom Core")
+### Domain 2: Industrial Aerodynamics ("Atom Core")
 
 **Objective:** Real-time drag minimization for 3D geometries.
 
@@ -87,7 +70,7 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 </p>
 
 
-### Domain 4: High-Energy Astrophysics ("PROBE-LIV")
+### Domain 3: High-Energy Astrophysics ("PROBE-LIV")
 
 **Objective:** Detection of Energy-Dependent Photon Dispersion (Lorentz Invariance Violation).
 
