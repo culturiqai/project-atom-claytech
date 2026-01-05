@@ -44,7 +44,7 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 **Objective:** Stabilization of 2D Kolmogorov Turbulence.
 
 * **Methodology:** The system interfaces with a spectral Direct Numerical Simulation (DNS) solver. It perceives fluid dynamics in the frequency domain (-space) to identify and cancel vorticity accumulation.
-* **Key Result:** Autonomously derived a control law for vorticity cancellation that aligns with Navier-Stokes energy dissipation terms.
+* **Key Result:** Autonomously deriving control laws for vorticity cancellation to converge towards Navier-Stokes energy dissipation terms.
 
 <p align="center">
   <img src="assets/ATOM.gif" width="800" title="Atom Architecture">
