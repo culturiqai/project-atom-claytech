@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/atom-cover.png" width="800" title="Atom Architecture">
+  <img src="assets/ atom-cover.png" width="800" title="Atom Architecture">
 </p>
 
 # Project Atom: A Domain-Agnostic Differentiable Physics Engine
