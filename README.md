@@ -12,7 +12,7 @@
 
 Atom is a Neuro-Symbolic framework designed to solve high-dimensional Partial Differential Equations (PDEs) and chaotic time-series where traditional numerical methods are computationally prohibitive. The architecture integrates continuous-time neural networks (Liquid Time-Constant networks) for control with asynchronous Symbolic Regression (PySR) for equation discovery.
 
-This framework is currently benchmarked across four distinct dynamical systems: Computational Fluid Dynamics (CFD), Biological Plasticity, and High-Energy Astrophysics. By constraining neural latent states to physically valid manifolds, Atom achieves a projected 100x+ inference speedup over standard solvers while maintaining strict conservation laws (e.g., mass, momentum).
+This framework is currently benchmarked across three distinct dynamical systems: Computational Fluid Dynamics (CFD), Biological Plasticity, and High-Energy Astrophysics. By constraining neural latent states to physically valid manifolds, Atom achieves a projected 100x+ inference speedup over standard solvers while maintaining strict conservation laws (e.g., mass, momentum).
 
 ---
 
