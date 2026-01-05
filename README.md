@@ -205,7 +205,7 @@ The ultimate goal of this pipeline is Automated Aerodynamic Design.
 ***Optimization:*** We use Gradient Descent on the latent variables. Because the pipeline is differentiable, we can calculate $\frac{\partial \text{Drag}}{\partial \text{Shape}}$.
 
 <p align="center">
-  <img src="assets/ezgif-2e747d51400a7b29.gif" width="800" title="Atom Architecture">
+  <img src="assets/inverse" width="800" title="Atom Architecture">
 </p>
 
 ***Application (2D Lamborghini Spoiler POC):*** This component was deployed to optimize the 2D side profile of the Lamborghini.
