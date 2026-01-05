@@ -24,7 +24,7 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 | --- | --- | --- |
 | **Input Encoder** | 3D Equivariant Fourier Neural Operator (FNO) | Compresses high-dimensional voxel/grid data into a resolution-independent latent physics manifold. |
 | **Control Policy** | Liquid Time-Constant (LTC) RNN | Models continuous-time latent dynamics via Ordinary Differential Equations (ODEs), ensuring robustness to irregular sampling. |
-| **Manifold Regularizer** | Differentiable Orthogonal Projection | A custom linear algebra layer (formerly "Nano-PCA") that penalizes state drift, forcing the neural network to obey conservation laws. |
+| **Manifold Regularizer** | Differentiable Orthogonal Projection | A custom linear algebra layer that penalizes state drift, forcing the neural network to obey conservation laws. |
 | **Symbolic Supervisor** | Asynchronous Symbolic Regression (PySR) | A background process that fits explicit differential equations to latent trajectories, minimizing residual error. |
 
 <p align="center">
