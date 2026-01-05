@@ -4,7 +4,7 @@
 
 # Project Atom: A Domain-Agnostic Differentiable Physics Engine
 
-**Current Status:** Active Research (v3.1) | **License:** Proprietary / Internal Use Only
+**Current Status:** Active Research (v3.1) | **License:** Proprietary / Capability Demo / Looking to scale
 
 ---
 
