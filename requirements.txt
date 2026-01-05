@@ -1,0 +1,14 @@
+# Core Differentiable Physics Stack
+jax>=0.4.13
+jaxlib>=0.4.13
+numpy>=1.24.0
+optax>=0.1.7            # For inverse_design.py optimization
+
+# Visualization & Interaction
+opencv-python>=4.8.0    # For visual.py (Real-time demo)
+matplotlib>=3.7.1       # For inverse_design.py plots
+pyvista>=0.42.0         # For 3D diagnostics (car_diagnostics.py)
+trimesh>=3.23.0         # For geometry loading
+
+# Optional: If you want them to run the high-fidelity sim
+# xlb                   # WARNING: Only include if this is public/pip-installable
