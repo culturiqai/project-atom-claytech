@@ -95,10 +95,6 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 
 
 
-* **Inference Latency:** 16ms (vs. 120s for standard CFD on equivalent grid).
-* **Conservation Error:** Mass violation .
-* **Hardware Optimization:** Custom JAX kernels optimized for Apple Silicon (Metal/MPS) and NVIDIA H100 (CUDA).
-
 </p>
 
 ---
