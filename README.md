@@ -54,7 +54,7 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
   <em>Figure 2: Atom autonomously deriving vorticity cancellation laws in real-time</em>
 </p>
 
-### Domain 2: Industrial Aerodynamics ("Atom Core") - Case-Study Attached "/atom-case-study"
+### Domain 2: Industrial Aerodynamics ("Atom Core")
 
 **Objective:** Real-time drag minimization for 3D geometries.
 
@@ -88,7 +88,12 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 
 ---
 
-## 4. Performance Benchmarks (See open Benchmarks in Case-Study Below)
+## 4. Performance Benchmarks 
+
+- See open Benchmarks in Case-Study Below
+- See Atom's Technical Report & Benchmarks in **"/atom-case-study"**
+
+
 
 * **Inference Latency:** 16ms (vs. 120s for standard CFD on equivalent grid).
 * **Conservation Error:** Mass violation .
