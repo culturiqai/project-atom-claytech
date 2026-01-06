@@ -43,7 +43,7 @@ An asynchronous Symbolic Regression engine (PySR) runs in parallel with the Brai
 *Data derived strictly from `bench.logs` (See below) Jan 8, 2026 Run).*
 
 <p align="center">
-  <img src="assets/atom_lbm.gif" width="800" title="Atom Architecture">
+  <img src="atom_lbm.gif" width="800" title="Atom Architecture">
 </p>
 
 ### 3.1 Performance Metrics
