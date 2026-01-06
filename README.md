@@ -54,7 +54,7 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
   <em>Figure 2: Atom autonomously deriving vorticity cancellation laws in real-time</em>
 </p>
 
-### Domain 2: Industrial Aerodynamics ("Atom Core")
+### Domain 2: Industrial Aerodynamics ("Atom Core") - Case-Study Attached "/atom-case-study"
 
 **Objective:** Real-time drag minimization for 3D geometries.
 
