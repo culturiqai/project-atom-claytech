@@ -90,8 +90,8 @@ The system replaces standard "Black Box" deep learning with a transparent, four-
 
 ## 4. Performance Benchmarks 
 
-- See open Benchmarks in Case-Study Below
-- See Atom's Technical Report & Benchmarks in **"/atom-case-study"**
+# See open Benchmarks in Case-Study Below
+# See Atom's Technical Report & Benchmarks in **"/atom-case-study"**
 
 
 
