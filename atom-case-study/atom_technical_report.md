@@ -210,7 +210,7 @@ Physics Speed: 3.73 FPS
    Max Neural Stress: 0.0250
 --------------------
 📄 Report saved to logs/benchmark_report.json
-(atom_env) tiger@Adityas-MacBook-Pro atom++ % python main.py dream
+(atom_env) user@atom-dev-node % python main.py dream
 
 >>> 💤 INITIALIZING REM SLEEP (Symbolic Distillation)...
    [Memory] Allocating 10000 steps (Obs: (4, 32, 16, 16))...
