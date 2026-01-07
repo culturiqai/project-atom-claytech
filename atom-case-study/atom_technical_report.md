@@ -24,12 +24,9 @@ A custom Lattice Boltzmann Method (LBM) solver provides the physical substrate.
 ### 2.2 The Eyes (Perception)
 A 3D Equivariant Fourier Neural Operator (FNO) replaces standard CNNs.
 * **Spectral Convolutions:** Operates in the frequency domain (FFT) to capture global flow structures.
-* **Physics-Informed Decoding:** The output is a **Vector Potential** ($\Psi$). By taking the curl ($\nabla \times \Psi$), the system guarantees Mass Conservation ($\nabla \cdot u = 0$) by construction.
 
 ### 2.3 The Brain (System 1: Intuition)
 A Liquid Time-Constant (LTC) Network serves as the fast-acting controller.
-* **Continuous Dynamics:** Modeled as ODEs ($dy/dt = -y/\tau + ...$), allowing the brain's internal state to evolve in continuous time.
-* **The Neural Skeleton:** The latent state is constrained to a manifold of valid physics. High-stress states trigger a "pain" signal.
 
 ### 2.4 The Scientist (System 2: Reasoning)
 An asynchronous Symbolic Regression engine (PySR) runs in parallel with the Brain.
