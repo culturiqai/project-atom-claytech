@@ -4,7 +4,17 @@
 
 # Project Atom: A Domain-Agnostic Differentiable Physics Engine
 
-**Current Status:** Active Research (v3.1) | **License:** Proprietary / Capability Demo / Looking to scale
+**Current Status:** Active Research (v3.1) | **License:** Open-Case Study "shop window"/  Proprietary "Atom" / Capability Demo / Looking to scale
+
+---
+
+# Table of Contents:
+
+* 1) Architecture Overview
+  2) Domain Generalisation
+  3) Open Benchmarks in Case-Study (Below)
+  4) Open Source 2D/3D Diffrentiable Engineering Tools available in ```/case-study```
+  5) Properitatory Atom's Technical Report & Benchmarks in ```/atom-case-study```
 
 ---
 
