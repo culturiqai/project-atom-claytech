@@ -1,3 +1,10 @@
+'''
+D3Q19 LBM Solver
+
+Note: This is a research-grade solver for homogeneous turbulence. 
+The production wind-tunnel kernel is available for enterprise partners.
+'''
+
 import jax
 # 1. CRITICAL: Enable 64-bit Precision BEFORE other JAX imports
 jax.config.update("jax_enable_x64", True)
