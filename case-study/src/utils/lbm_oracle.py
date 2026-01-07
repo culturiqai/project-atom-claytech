@@ -2,6 +2,9 @@
 JAX-LBM: Differentiable, Batched, GPU-Accelerated Fluid Solver.
 Date: Dec 7, 2025
 
+Note: This is a research-grade solver for homogeneous turbulence. 
+The production wind-tunnel kernel is available for enterprise partners.
+
 Architecture:
 - Method: D2Q9 Lattice Boltzmann Method (TRT Collision + Zou-He Inlet)
 - Implementation: Pure JAX (Functional)
