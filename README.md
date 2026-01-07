@@ -13,8 +13,8 @@
 * 1) Architecture Overview
   2) Domain Generalisation
   3) Open Benchmarks in Case-Study (Below)
-  4) Open Source 2D/3D Diffrentiable Engineering Tools available in ```/case-study```
-  5) Properitatory Atom's Technical Report & Benchmarks in ```/atom-case-study```
+  4) Open Source 2D/3D Inverse Diffrentiable Physics Tools available in ```/case-study```
+  5) Proprietary Atom's Technical Report & Benchmarks in ```/atom-case-study```
   6) Full Atom source code & Read Team Code (Adversarial & Conformal) are not in this repo. Please contact for more information
 
 ---
