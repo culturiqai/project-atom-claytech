@@ -2,7 +2,7 @@
 D3Q19 LBM Solver
 
 Note: This is a research-grade solver for homogeneous turbulence. 
-The production wind-tunnel kernel is available for enterprise partners.
+The production wind-tunnel kernel is available in ../simulation/car_sim_pro.py
 '''
 
 import jax
