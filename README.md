@@ -6,6 +6,8 @@
 
 **Current Status:** Active Research (v3.1) | **License:** Open-Case Study "shop window"/  Proprietary "Atom" / Capability Demo / Looking to scale
 
+The GitHub repo is the research kernel. The Production Engine (with Symbolic Discovery and 3D Wind Tunnel support) is available for pilot partners. Let's schedule a demo.
+
 ---
 
 # Table of Contents:
