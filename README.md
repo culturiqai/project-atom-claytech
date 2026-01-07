@@ -15,6 +15,7 @@
   3) Open Benchmarks in Case-Study (Below)
   4) Open Source 2D/3D Diffrentiable Engineering Tools available in ```/case-study```
   5) Properitatory Atom's Technical Report & Benchmarks in ```/atom-case-study```
+  6) Full Atom source code & Read Team Code (Adversarial & Conformal) are not in this repo. Please contact for more information
 
 ---
 
@@ -321,6 +322,6 @@ python src/utils/visual.py
 **Proprietary / Internal Use Only.**
 Looking for a fast-paced team to scale this. This repository contains documentation and proof-of-concept benchmarks for the Atom architecture. Source code, model weights, and specific hyperparameters are closed-source and currently not available for public distribution.
 
-* **Principal Researcher:** Aditya Tiwari
+* **Principal Researcher:** Aditya Tiwari **Linkedin: https://www.linkedin.com/in/aditya-tiwari-jsr/***
 * **Entity:** Culturiq Research Pvt Ltd.
 
