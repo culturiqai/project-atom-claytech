@@ -69,6 +69,9 @@ The Scientist independently converged on two fundamental principles of drag redu
 * **Mean Reward:** `-0.0264`
 * **Analysis:** The Neural Skeleton remained well within safety margins (< 0.1). This proves that the biological constraints successfully kept the neural dynamics stable, preventing "policy collapse."
 
+### Future Work: 
+Benchmarking against standard automotive geometries (Ahmed Body) and aerospace profiles (NACA 0012) to validate Reynolds-averaged Navier–Stokes (RANS) correlations.
+
 ---
 
 ## 4. Conclusion
