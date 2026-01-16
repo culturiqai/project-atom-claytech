@@ -45,6 +45,10 @@ An asynchronous Symbolic Regression engine (PySR) runs in parallel with the Brai
   <img src="atom_lbm.gif" width="800" title="Atom Architecture">
 </p>
 
+### LINKEDIN DEMO VIDEOS:
+* **AI vs. Symmetry:** How a Neuro-Symbolic Agent Found a "Hidden" Optimization in Fluid Dynamics. (Discretization Error) #Link: https://www.linkedin.com/feed/update/urn:li:activity:7416484010224242688/
+* **Stabilization of 2D Kolmogorov Turbulence:** AI Discovers governing equations #Link: https://www.linkedin.com/feed/update/urn:li:activity:7413697335538675712/
+   
 ### 3.1 Performance Metrics
 * **Physics Fidelity:** Stable simulation at **3.73 FPS** (Steps per Second) on Apple Metal. # Improvement in Progress
 * **Stability:** 1000+ steps without divergence or memory leaks.
